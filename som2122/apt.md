@@ -4,7 +4,7 @@
 **APT**, **Advanced Packaging Tool**, es un comando que permite a los usuarios administrar los paquetes de su distribución Linux. Mediante este comando podemos instalar, actualizar, eliminar paquetes de Ubuntu, Debian y otras distribuciones. Estos paquetes contienen aplicaciones, actualizaciones, etc. 
 
  
-### Principales comandos con APT
+## Principales comandos con APT
 
   
 
@@ -118,11 +118,12 @@ Si tratamos de instalar un paquete que ya tenemos instalado simplemente instalar
   
 
 `sudo apt autoremove`  
+
 Elimina las dependencias de paquetes que han sido eliminados
 
 
 ## Sobre repositorios
-## Añadir repositorios de forma manual
+### Añadir repositorios de forma manual
 
 
 Cuando realizamos las operaciones de instalación de paquetes, estos son descargados de unos pocos repositorios. 
@@ -136,7 +137,7 @@ Además, dentro del siguiente directorio también podemos encontrar algunos repo
 
 `/etc/apt/sources.list.d/`
 
-## Instalación por medio de add-apt-repository
+### Instalación por medio de add-apt-repository
 
 El comando `add-apt-repository [options] repository` permite añadir un repositorio al conjunto de repositorios.
 
@@ -163,8 +164,8 @@ Es habitual que los repositorios requieran una certificado (GPG) para poder inte
 `echo "deb https://apache.bintray.com/couchdb-deb bionic main" | sudo tee -a /etc/apt/sources.list`
 Añadimos la URL a nuestro listado de repositorios
 
-`sudo apt update`
-`sudo apt install couchdb`
+`sudo apt update`.
+`sudo apt install couchdb`.
 
 ## Ejercicios
 
@@ -184,18 +185,18 @@ Los siguientes ejercicios deben realizarse sobre una máquina virtual [Ubuntu](h
 
 7. Explica qué es un repositorio.
 
-8. Añade el repositorio personal `ppa:gerardpuig/ppa` e instala el programa ubuntu-cleaner.
+8. Añade el repositorio personal `ppa:gerardpuig/ppa` e instala el programa **ubuntu-cleaner**.
 
 9. Explica los siguientes comandos y lánzalos en tu terminal.
 
-sudo apt update; sudo apt install software-properties-common apt-transport-https
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt install code
+- sudo apt update; sudo apt install software-properties-common apt-transport-https
+- wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+- sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+- sudo apt install code
 
 10. Explica cómo podemos eliminar una clave PGP pública que ya no utilicemos.
 
-11. Instalando **Spotify**
+11. Instala **Spotify**
 
     -   Instala curl (Herramientas para la transferencia de archivos)
         - sudo apt install curl
@@ -204,3 +205,5 @@ sudo apt install code
         - echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
     -   Acualización e instalación
         - sudo apt-get update && sudo apt-get install spotify-client    
+
+12. Lanza el comando `autoremove` e indica su para qué sirve. 
