@@ -122,7 +122,7 @@ Elimina las dependencias de paquetes que han sido eliminados
 
 
 ## Sobre repositorios
-# Añadir repositorios de forma manual
+## Añadir repositorios de forma manual
 
 
 Cuando realizamos las operaciones de instalación de paquetes, estos son descargados de unos pocos repositorios. 
@@ -136,7 +136,7 @@ Además, dentro del siguiente directorio también podemos encontrar algunos repo
 
 `/etc/apt/sources.list.d/`
 
-# Instalación por medio de add-apt-repository
+## Instalación por medio de add-apt-repository
 
 El comando `add-apt-repository [options] repository` permite añadir un repositorio al conjunto de repositorios.
 
@@ -170,36 +170,32 @@ Añadimos la URL a nuestro listado de repositorios
 
 Los siguientes ejercicios deben realizarse sobre una máquina virtual [Ubuntu](https://ubuntu.com/download/desktop/thank-you?version=22.04&architecture=amd64)
 
-1. Consulta los paquetes que hay instalados en tu equipo
-2. Lanza el comando `sudo apt install`. Muestra el resultado.
-3. Lanza el comando `sudo apt upgrade`. Muestra el resultado y explica qué ha sucedido. 
-4. Busca si existe el paquete gimp
-5. Instala gimp
-6. Elimina gimp (comando remove)
-7. Añade el repositorio personal `ppa:gerardpuig/ppa` e instala el programa ubuntu-cleaner
-8. Instala vlc elimina (comando purge)
+1. Indica el comando necesario para consultar los paquetes que hay instalados en tu equipo.
 
+2. Lanza el comando `sudo apt update`. Indica para qué sirve y Muestra el resultado.
 
+3. Lanza el comando `sudo apt upgrade`. Indica para qué sirve y muestra el resultado.
 
+4. Indica el comando necesario para buscar el paquete **Gimp**.
 
+5. Instala **Gimp**. Indica los comandos necesarios.
 
-2. 
+6. Elimina **Gimp**. Indica los comandos necesarios: Remove.
 
-3. Explica qué es un repositorio.
+7. Explica qué es un repositorio.
 
-4. Instalando mariadb
+8. Añade el repositorio personal `ppa:gerardpuig/ppa` e instala el programa ubuntu-cleaner.
 
-6. Ejecuta y explica los siguientes comandos
+9. Explica los siguientes comandos y lánzalos en tu terminal.
 
 sudo apt update; sudo apt install software-properties-common apt-transport-https
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code
 
-7. ¿Cómo podemos eliminar una clave PGP pública que ya no utilicemos?
-8. 
+10. Explica cómo podemos eliminar una clave PGP pública que ya no utilicemos.
 
-5. Instalando **Spotify**
+11. Instalando **Spotify**
 
     -   Instala curl (Herramientas para la transferencia de archivos)
         - sudo apt install curl
@@ -208,7 +204,3 @@ sudo apt install code
         - echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
     -   Acualización e instalación
         - sudo apt-get update && sudo apt-get install spotify-client    
-
-My favorite search engine is [cosas_2](https://github.com/nsantonjamolina/clase/blob/70425cc9a6ddf254d5c959a41b37f63b15c7a4d3/som2122/cosa.md).
-
-
