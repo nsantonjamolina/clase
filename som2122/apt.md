@@ -122,6 +122,13 @@ Si tratamos de instalar un paquete que ya tenemos instalado simplemente instalar
 Elimina las dependencias de paquetes que han sido eliminados
 
 
+### Obtener información acerca de un paquete
+
+  
+
+`sudo apt show <paquete>`  
+
+
 ## Sobre repositorios
 ### Añadir repositorios de forma manual
 
@@ -207,3 +214,11 @@ Los siguientes ejercicios deben realizarse sobre una máquina virtual [Ubuntu](h
         - sudo apt-get update && sudo apt-get install spotify-client    
 
 12. Lanza el comando `autoremove` e indica su para qué sirve. 
+13. Muestra el contenido de `/etc/apt/sources.list` y de `/etc/apt/sources.list.d/` y explica lo que ves. 
+14. Instalar vim
+15. Instala emacs
+16. remove emacs
+17. purge emacs
+
+16. El editor de texto nano viene instalado con la propia instalación de Ubuntu. ¿Es posible desinstalarlo? Inténtalo. 
+17. ¿?
