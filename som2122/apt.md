@@ -122,6 +122,7 @@ Elimina las dependencias de paquetes que han sido eliminados
 
 
 ## Sobre repositorios
+# Añadir repositorios de forma manual
 
 
 Cuando realizamos las operaciones de instalación de paquetes, estos son descargados de unos pocos repositorios. 
@@ -134,6 +135,18 @@ Los repositorios que son utilizados están en el fichero
 Además, dentro del siguiente directorio también podemos encontrar algunos repositorios
 
 `/etc/apt/sources.list.d/`
+
+# Instalación por medio de add-apt-repository
+
+El comando `add-apt-repository [options] repository` permite añadir un repositorio al conjunto de repositorios.
+
+1. Añadir la clave pública `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4`
+2. Añadir el repositorio `sudo add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse'`
+
+De este modo ya tenemos el repositorio asociado a la aplicación MongoDB
+
+Podemos proceder a instalarlo mediante `sudo apt install mongodb-org`
+
 
 ### Sintaxis del fichero sources.list
 
@@ -155,11 +168,38 @@ Añadimos la URL a nuestro listado de repositorios
 
 ## Ejercicios
 
-1. First item
+Los siguientes ejercicios deben realizarse sobre una máquina virtual [Ubuntu](https://ubuntu.com/download/desktop/thank-you?version=22.04&architecture=amd64)
 
-2. ¿Cómo podemos eliminar una clave PGP pública que ya no utilicemos?
+1. Consulta los paquetes que hay instalados en tu equipo
+2. Lanza el comando `sudo apt install`. Muestra el resultado.
+3. Lanza el comando `sudo apt upgrade`. Muestra el resultado y explica qué ha sucedido. 
+4. Busca si existe el paquete gimp
+5. Instala gimp
+6. Elimina gimp (comando remove)
+7. Añade el repositorio personal `ppa:gerardpuig/ppa` e instala el programa ubuntu-cleaner
+8. Instala vlc elimina (comando purge)
 
-3. Instalando **Spotify**
+
+
+
+
+2. 
+
+3. Explica qué es un repositorio.
+
+4. Instalando mariadb
+
+6. Ejecuta y explica los siguientes comandos
+
+sudo apt update; sudo apt install software-properties-common apt-transport-https
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
+
+7. ¿Cómo podemos eliminar una clave PGP pública que ya no utilicemos?
+8. 
+
+5. Instalando **Spotify**
 
     -   Instala curl (Herramientas para la transferencia de archivos)
         - sudo apt install curl
